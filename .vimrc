@@ -7,7 +7,7 @@ so ~/.vim/plugins.vim
 syntax enable
 
 let mapleader = ','					"The default leader is \, but a comma is much better.
-set number						"Let's activate line numbers.
+set nonumber						"Let's deactivate line numbers.
 set linespace=15					"line-height - Only works in graphical vim editors like Macvim.
 
 
@@ -16,6 +16,15 @@ colorscheme PaperColor
 set t_CO=256						"Use 256 colors. This is useful for Terminal Vim.
 set guifont=Fira_Code					"Only works for graphical vim editors.
 set background=light
+set guioptions-=e					"We don't want gui tabs.
+
+hi LineNr guibg=bg					"Only works for graphical vim editors.
+
+"We'll fake a custom left padding for each window.
+set foldcolumn=2
+hi foldcolumn guibg=bg
+
+hi vertsplit guifg=bg guibg=bg				"Get rid of ugly split borders.
 
 
 
@@ -53,6 +62,27 @@ nmap <Leader><space> :nohlsearch<cr>
 "Make NERDTree easier to toggle.
 nmap <Leader>1 :NERDTreeToggle<cr>
 
+"Search for symbols.
+nmap <c-R> :CtrlPBufTag<cr>
+
+
+
+"----------------Plugins---------------"
+"\
+"\ NERDTree
+"\
+"Let Vinegar be Vinegar and don't open NERDTree
+let NERDTreeHijackNetrw = 0
+
+
+"\
+"\ Greplace.vim
+"\
+set grepprg=ag							"We want to use 'Ag' for the search.
+
+let g:grep_cmd_opts = '--line-numbers --noheading'
+
+
 
 
 "----------------Auto-Commands---------------"
@@ -62,3 +92,10 @@ augroup autosourcing
 	autocmd!
 	autocmd BufWritePost .vimrc source %
 augroup END
+
+
+
+" Notes and Tips
+" - Press 'zz' to instantly center the line where the cursor is located.
+" - Use ']' on a function call, to jump to its source (don't forget to
+"   generate ctags -R beforehand)
