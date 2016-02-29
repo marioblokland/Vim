@@ -124,7 +124,7 @@ let g:syntastic_check_on_wq = 0
 
 
 "----------------Auto-Commands---------------"
-"Automaically source the Vimrc file on save.
+"Automatically source the Vimrc file on save.
 
 augroup autosourcing
 	autocmd!
