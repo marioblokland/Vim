@@ -12,6 +12,7 @@ Plugin 'mhartington/oceanic-next'
 Plugin 'othree/yajs.vim'
 Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

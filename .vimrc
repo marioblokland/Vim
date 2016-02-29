@@ -79,9 +79,20 @@ let NERDTreeHijackNetrw = 0
 "\ Greplace.vim
 "\
 set grepprg=ag							"We want to use 'Ag' for the search.
-
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
+
+"\
+"\ Syntastic
+"\
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 
 
