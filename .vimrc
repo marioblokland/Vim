@@ -1,4 +1,4 @@
-set nocompatible              						"We want the latest Vim settings/options.
+set nocompatible                                        "We want the latest Vim settings/options.
 
 so ~/.vim/plugins.vim
 
@@ -6,25 +6,25 @@ so ~/.vim/plugins.vim
 
 syntax enable
 
-let mapleader = ','									"The default leader is \, but a comma is much better.
-set nonumber										"Let's deactivate line numbers.
-set linespace=15									"line-height - Only works in graphical vim editors like Macvim.
+let mapleader = ','                                     "The default leader is \, but a comma is much better.
+set nonumber                                            "Let's deactivate line numbers.
+set linespace=15                                        "line-height - Only works in graphical vim editors like Macvim.
 
 
 "----------------Visuals---------------"
 colorscheme PaperColor
-set t_CO=256										"Use 256 colors. This is useful for Terminal Vim.
-set guifont=Fira_Code								"Only works for graphical vim editors.
+set t_CO=256                                            "Use 256 colors. This is useful for Terminal Vim.
+set guifont=Fira_Code                                   "Only works for graphical vim editors.
 set background=light
-set guioptions-=e									"We don't want gui tabs.
+set guioptions-=e                                       "We don't want gui tabs.
 
-hi LineNr guibg=bg									"Only works for graphical vim editors.
+hi LineNr guibg=bg                                      "Only works for graphical vim editors.
 
 "We'll fake a custom left padding for each window.
 set foldcolumn=2
 hi foldcolumn guibg=bg
 
-hi vertsplit guifg=bg guibg=bg						"Get rid of ugly split borders.
+hi vertsplit guifg=bg guibg=bg                           "Get rid of ugly split borders.
 
 "Show a visual line under the cursor's current line.
 set cursorline
@@ -105,7 +105,7 @@ let NERDTreeHijackNetrw = 0
 "\
 "\ Greplace.vim
 "\
-set grepprg=ag														"We want to use 'Ag' for the search.
+set grepprg=ag                                            "We want to use 'Ag' for the search.
 let g:grep_cmd_opts = '--line-numbers --noheading'
 
 
