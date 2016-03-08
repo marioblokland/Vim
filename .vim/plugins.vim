@@ -17,6 +17,13 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'hdima/python-syntax'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'ervandew/supertab'
+Plugin 'mitsuhiko/vim-jinja'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'trusktr/seti.vim'
+Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

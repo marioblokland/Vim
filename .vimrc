@@ -14,7 +14,7 @@ set linespace=15                                        "line-height - Only work
 "----------------Visuals---------------"
 colorscheme PaperColor
 set t_CO=256                                            "Use 256 colors. This is useful for Terminal Vim.
-set guifont=Fira_Code                                   "Only works for graphical vim editors.
+set guifont=Fira_Code:h11                                   "Only works for graphical vim editors.
 set background=light
 set guioptions-=e                                       "We don't want gui tabs.
 
@@ -28,6 +28,7 @@ hi vertsplit guifg=bg guibg=bg                           "Get rid of ugly split 
 
 "Show a visual line under the cursor's current line.
 set cursorline
+
 
 
 
@@ -58,6 +59,7 @@ nmap <C-L> <C-W><C-L>
 "----------------Mappings---------------"
 "Make it easy to edit the Vimrc file.
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
+nmap <Leader>ep :tabedit ~/.vim/plugins.vim<cr>
 
 "Turn search highlighting off.
 nmap <Leader><space> :nohlsearch<cr>
@@ -75,7 +77,9 @@ nmap <c-R> :CtrlPBufTag<cr>
 "\ Python
 "\
 "Enable all Python syntax highlighting features
-let python_highlight_all = 1
+let python_highlight_all=1
+let g:pymode_syntax=1
+let g:pymode_syntax_all=1
 
 
 
@@ -122,6 +126,14 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 
+"\
+"\ UltiSnips
+"\
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
 
 "----------------Auto-Commands---------------"
 "Automatically source the Vimrc file on save.
@@ -137,3 +149,5 @@ augroup END
 " - Press 'zz' to instantly center the line where the cursor is located.
 " - Use ']' on a function call, to jump to its source (don't forget to
 "   generate ctags -R beforehand)
+"
+"
