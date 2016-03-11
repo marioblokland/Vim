@@ -2,8 +2,6 @@ set nocompatible                                        "We want the latest Vim 
 
 so ~/.vim/plugins.vim
 
-
-
 syntax enable
 
 let mapleader = ','                                     "The default leader is \, but a comma is much better.
@@ -12,11 +10,14 @@ set linespace=15                                        "line-height - Only work
 
 
 "----------------Visuals---------------"
-colorscheme PaperColor
+colorscheme molokai
 set t_CO=256                                            "Use 256 colors. This is useful for Terminal Vim.
-set guifont=Fira_Code:h11                                   "Only works for graphical vim editors.
-set background=light
+"set background=dark
+set guifont=Fira\ Mono:h11                                   "Only works for graphical vim editors.
 set guioptions-=e                                       "We don't want gui tabs.
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
 
 hi LineNr guibg=bg                                      "Only works for graphical vim editors.
 
@@ -70,6 +71,8 @@ nmap <Leader>1 :NERDTreeToggle<cr>
 "Search for symbols.
 nmap <c-R> :CtrlPBufTag<cr>
 
+"Find symbols (methods, functions etc.)
+nmap <Leader>f :tag<space>
 
 
 "----------------Languages---------------"
@@ -77,9 +80,7 @@ nmap <c-R> :CtrlPBufTag<cr>
 "\ Python
 "\
 "Enable all Python syntax highlighting features
-let python_highlight_all=1
-let g:pymode_syntax=1
-let g:pymode_syntax_all=1
+let python_highlight_all = 1
 
 
 
@@ -132,6 +133,14 @@ let g:syntastic_check_on_wq = 0
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
+"\
+"\ Airline
+"\
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
 
 
 

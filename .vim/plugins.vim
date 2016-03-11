@@ -8,22 +8,37 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'othree/yajs.vim'
 Plugin 'rking/ag.vim'
 Plugin 'skwp/greplace.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
-Plugin 'hdima/python-syntax'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'ervandew/supertab'
 Plugin 'mitsuhiko/vim-jinja'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'trusktr/seti.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'Shougo/unite.vim'
+
+" Auto completion
 Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
+
+" Python
+"Plugin 'hdima/python-syntax'
+Plugin 'klen/python-mode'
+Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'davidhalter/jedi-vim'
+
+" PHP
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'StanAngeloff/php.vim'
+
+" Airline
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
