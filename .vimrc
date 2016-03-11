@@ -23,9 +23,15 @@ hi LineNr guibg=bg                                      "Only works for graphica
 
 "We'll fake a custom left padding for each window.
 set foldcolumn=2
+
+"For GUI Vim
 hi foldcolumn guibg=bg
+"For terminal Vim
+hi foldcolumn ctermbg=bg
+
 
 hi vertsplit guifg=bg guibg=bg                           "Get rid of ugly split borders.
+hi vertsplit ctermfg=bg ctermbg=bg                           
 
 "Show a visual line under the cursor's current line.
 set cursorline
@@ -65,7 +71,6 @@ nmap <Leader>ep :tabedit ~/.vim/plugins.vim<cr>
 "Turn search highlighting off.
 nmap <Leader><space> :nohlsearch<cr>
 
-"Make NERDTree easier to toggle.
 nmap <Leader>1 :NERDTreeToggle<cr>
 
 "Search for symbols.
@@ -73,6 +78,9 @@ nmap <c-R> :CtrlPBufTag<cr>
 
 "Find symbols (methods, functions etc.)
 nmap <Leader>f :tag<space>
+
+"Show marks
+nmap <Leader>m :marks<cr>
 
 
 "----------------Languages---------------"
