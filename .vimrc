@@ -10,10 +10,10 @@ set linespace=15                                        "line-height - Only work
 
 
 "----------------Visuals---------------"
-colorscheme molokai
+colorscheme gruvbox
 set t_CO=256                                            "Use 256 colors. This is useful for Terminal Vim.
-"set background=dark
-set guifont=Fira\ Mono:h11                                   "Only works for graphical vim editors.
+set background=dark
+set guifont=Fira\ Mono:h11                              "Only works for graphical vim editors.
 set guioptions-=e                                       "We don't want gui tabs.
 set guioptions-=m
 set guioptions-=T
@@ -28,7 +28,6 @@ set foldcolumn=2
 hi foldcolumn guibg=bg
 "For terminal Vim
 hi foldcolumn ctermbg=bg
-
 
 hi vertsplit guifg=bg guibg=bg                           "Get rid of ugly split borders.
 hi vertsplit ctermfg=bg ctermbg=bg                           
@@ -148,6 +147,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "\
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#themes#hybrid#palette = {}
 set laststatus=2
 
 
