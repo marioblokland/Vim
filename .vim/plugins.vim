@@ -21,6 +21,7 @@ Plugin 'mitsuhiko/vim-jinja'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Shougo/unite.vim'
 Plugin 'mattn/emmet-vim'
+Plugin 'kien/rainbow_parentheses.vim'
 
 " Auto completion
 Plugin 'honza/vim-snippets'

@@ -151,6 +151,15 @@ let g:airline#themes#hybrid#palette = {}
 set laststatus=2
 
 
+"\
+"\ Rainbow Parentheses.vim
+"\
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+
 
 "----------------Auto-Commands---------------"
 "Automatically source the Vimrc file on save.
