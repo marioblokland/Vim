@@ -7,13 +7,17 @@ syntax enable
 let mapleader = ','                                     "The default leader is \, but a comma is much better.
 set nonumber                                            "Let's deactivate line numbers.
 set linespace=15                                        "line-height - Only works in graphical vim editors like Macvim.
+set encoding=utf-8
 
 
-"----------------Visuals---------------"
-colorscheme gruvbox
+"----------------Visuals---------------" 
+"let g:gruvbox_contrast_dark="soft"                      "Use the hard contrast on the dark gruvbox theme. 
+                                                        "This has to be set BEFORE the colorscheme.
+
+colorscheme solarized
 set t_CO=256                                            "Use 256 colors. This is useful for Terminal Vim.
 set background=dark
-set guifont=Fira\ Mono:h11                              "Only works for graphical vim editors.
+set guifont=Knack:h11                                   "Only works for graphical vim editors.
 set guioptions-=e                                       "We don't want gui tabs.
 set guioptions-=m
 set guioptions-=T
@@ -34,7 +38,6 @@ hi vertsplit ctermfg=bg ctermbg=bg
 
 "Show a visual line under the cursor's current line.
 set cursorline
-
 
 
 
@@ -80,6 +83,11 @@ nmap <Leader>f :tag<space>
 
 "Show marks
 nmap <Leader>m :marks<cr>
+
+if has('nvim')
+    nmap <Leader>t :terminal<cr>
+endif
+
 
 
 "----------------Languages---------------"
@@ -147,7 +155,8 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "\
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#themes#hybrid#palette = {}
+"let g:airline#themes#gruvbox#palette = {}
+let g_airline_theme='solarized'
 set laststatus=2
 
 

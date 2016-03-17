@@ -28,7 +28,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'SirVer/ultisnips'
 
 " Python
-"Plugin 'hdima/python-syntax'
 Plugin 'klen/python-mode'
 Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'davidhalter/jedi-vim'
@@ -42,6 +41,8 @@ Plugin 'StanAngeloff/php.vim'
 " Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
