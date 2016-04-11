@@ -13,6 +13,8 @@ set encoding=utf-8
 "----------------Visuals---------------" 
 "let g:gruvbox_contrast_dark="soft"                      "Use the hard contrast on the dark gruvbox theme. 
                                                         "This has to be set BEFORE the colorscheme.
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1                       "Use reduced contrast for the hybrid theme.
 
 colorscheme solarized
 set t_CO=256                                            "Use 256 colors. This is useful for Terminal Vim.
@@ -76,7 +78,7 @@ nmap <Leader><space> :nohlsearch<cr>
 nmap <Leader>1 :NERDTreeToggle<cr>
 
 "Search for symbols.
-nmap <c-R> :CtrlPBufTag<cr>
+nmap <Leader>r :CtrlPBufTag<cr>
 
 "Find symbols (methods, functions etc.)
 nmap <Leader>f :tag<space>
@@ -87,6 +89,9 @@ nmap <Leader>m :marks<cr>
 if has('nvim')
     nmap <Leader>t :terminal<cr>
 endif
+
+"Run the current file in Python
+nmap <Leader>p :!python %<cr>
 
 
 
